@@ -19,3 +19,5 @@ module MyAddr::owner{
     debug::print<u8>(&c);
   }
 }
+
+pucloib a nt he entry fun towe nsuhsip of the and the sad asrja 
