@@ -36,4 +36,28 @@ module car::car{
 
         transfer::transfer(car, tx_context::sender(ctx));
     }
+
+    public entry fun transfer(car: Car, recipient: Address, ctx: &mut TxContext){ //4
+
+        /*This code transfers the Car object to the recipient. The transfer() function takes the Car object and the recipient's 
+        account address as parameters.*/
+
+        transfer::transfer(car, recipient);
+    }
+
+    public fun get_stats(self: &car): (u8, u8, u8){
+        (self.speed, self.acceleration, self.handling)
+    }
+
+    public entry fun upgrade_speed(self: &mut Car, amount: u8){
+        self.speed = self.speed + amount; 
+    }
+
+    public entry fun uprade_accelaration(self: &mut Car, amount: u8){
+        self.acceleration = self.acceleration + amount;
+    }
+
+    public entry fun uprade_handling(self: &mut Car, amount: u8){
+        self.handling = self.handling + amount;
+    }
 }l
