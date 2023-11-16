@@ -12,7 +12,7 @@ address my_addrx{
   module B{
     fun B_Car(): u8{
 
-        return my_addrx::A::A_Car();
+        return my_addrx::A::A_Car(); //ERROR - as A_Car() is a private function
 
     }
 
